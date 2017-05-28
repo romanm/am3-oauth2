@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<title>am3-oAuth2 test</title>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="/webjars/font-awesome/4.7.0/css/font-awesome.min.css"
+	rel="stylesheet" />
+<link href="/f/css/w3.css" rel="stylesheet" />
+<script src="/webjars/angularjs/1.6.4/angular.min.js"></script>
+<script src="/webjars/angularjs/1.6.4/angular-sanitize.min.js"></script>
+<script src="/f/js/am3oauth2.js"></script>
+
+<body ng-app="app" ng-controller="home as home">
+	<div class="w3-container">
+		oAuth2 login
+		<h1>Логін</h1>
+		<div class="container" ng-show="!home.authenticated">
+			<div>
+				Через Facebook: <a href="/login/facebook">click here</a>
+			</div>
+			<div>
+				Через Github: <a href="/login/github">click here</a>
+			</div>
+		</div>
+		<div class="container" ng-show="home.authenticated">
+			Залогінився як: <span ng-bind="home.user"></span>
+			<div>
+				<button ng-click="home.logout()" class="w3-btn w3-border">Логаут</button>
+				<!-- 
+				<button ng-click="home.logout()" class="w3-btn w3-blue">Логаут</button>
+				 -->
+			</div>
+		</div>
+	</div>
+</body>
+</html>
