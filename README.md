@@ -1,5 +1,5 @@
 # am3-oauth2
-## Тест oAuth2 роботи з центральним компонентом.
+Тест oAuth2 роботи з центральним компонентом.
 
     git clone https://github.com/romanm/am3-oauth2
     cd am3-oauth2/
